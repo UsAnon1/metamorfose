@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cartões de enfrentamento</title>
+<meta name="description" content="Cartões de enfrentamento para reflexão e bem-estar.">
+<!-- o <link rel="manifest"> é injetado pelo vite-plugin-pwa no build -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<!-- cor da barra do navegador (o app troca entre claro/escuro em useTheme.js) -->
+<meta name="theme-color" content="#f4f1ec" id="metaTema">
+<!-- iOS / Safari -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Cartões">
+<meta name="mobile-web-app-capable" content="yes">
+<!-- aplica o tema salvo antes do Vue montar (evita "piscar" claro/escuro) -->
+<script>try{var t=localStorage.getItem('reflexo_tema')||(matchMedia('(prefers-color-scheme:dark)').matches?'escuro':'claro');document.documentElement.dataset.tema=t}catch(e){}</script>
+</head>
+<body><div id="app"></div><script type="module" src="/src/main.js"></script></body>
+</html>

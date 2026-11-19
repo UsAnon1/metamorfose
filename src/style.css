@@ -1,0 +1,29 @@
+/* Estilos GLOBAIS: tema, base, botões e janelas (modais) compartilhados */
+:root{--bg:#f4f1ec;--fg:#2b2a33;--muted:#7a7785;--accent:#6c5ce7;--surface:#fff;--line:rgba(43,42,51,.15);color-scheme:light}
+:root[data-tema="escuro"]{color-scheme:dark;--bg:#17161c;--fg:#f1eff7;--muted:#9a97a8;--accent:#8f82ff;--surface:#24232c;--line:rgba(241,239,247,.18)}
+*{box-sizing:border-box}
+html{overflow-x:hidden;width:100%}
+body{margin:0;min-height:100dvh;overflow-x:hidden;overscroll-behavior-y:contain;-webkit-tap-highlight-color:transparent;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,sans-serif;display:flex;justify-content:center}
+button,label{font:inherit;cursor:pointer}
+h1,h2,h3{margin:0}
+.sub{color:var(--muted);font-size:14px;margin:8px 0 16px;text-align:center}
+.empty{text-align:center;color:var(--muted);margin:30% 10px 0}
+.hint{color:var(--muted);font-size:12px;text-align:center;margin-top:4px}
+.btn{display:block;width:100%;padding:14px;border:0;border-radius:12px;background:var(--accent);color:#fff;font-weight:600;font-size:16px;margin-bottom:10px;text-align:center}
+.btn.sec{background:var(--surface);color:var(--fg);border:1px solid var(--line)}
+.btn:disabled{opacity:.6}
+.erro{color:#d63031;font-size:14px;margin:0 0 10px;text-align:center}
+.sr{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none}
+input[type=text],input[type=email],input[type=password],textarea,select{width:100%;padding:14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--fg);font-size:16px;margin-bottom:12px;font-family:inherit}
+/* janela (bottom sheet) */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:flex-end;justify-content:center;z-index:10}
+.sheet{background:var(--bg);width:100%;max-width:440px;border-radius:24px 24px 0 0;padding:24px;max-height:90vh;overflow:auto}
+.sheet h2{margin-bottom:16px;font-size:20px}
+.modal-enter-active,.modal-leave-active{transition:opacity .25s}
+.modal-enter-active .sheet,.modal-leave-active .sheet{transition:transform .25s ease}
+.modal-enter-from,.modal-leave-to{opacity:0}
+.modal-enter-from .sheet,.modal-leave-to .sheet{transform:translateY(100%)}
+/* troca de telas */
+.tela-enter-active,.tela-leave-active{transition:opacity .2s ease,transform .2s ease}
+.tela-enter-from{opacity:0;transform:translateX(16px)}
+.tela-leave-to{opacity:0;transform:translateX(-16px)}
